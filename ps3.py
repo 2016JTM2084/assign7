@@ -17,7 +17,7 @@ if a==1:
 	d=raw_input("enter the district name you want to add")
 	q=raw_input("enter the code name you want to add for district")
 	district.update({d:q})
-	
+	print "added successfully"	
 if a==3:	
 	b=raw_input("enter the state want to delete\n")
 	if b in state.keys():	
@@ -34,6 +34,7 @@ if a==3:
 		del district[b]
 	else :
 		print "not a valid key"
+	print "deleted successfully"
 if a==2:
 	t1=raw_input("enter the state whose code you want to modify\n")
 	t11=raw_input("enter the new code\n")
@@ -53,6 +54,7 @@ if a==2:
 		city.update({t3:t31})
 	else :
 		print 'not a valid city'
+	print "updated successfully"
 else :
 	l1=raw_input("enter the customer name\n")
 	l2=raw_input("enter the customer district\n")
@@ -60,11 +62,11 @@ else :
 	l4=raw_input("enter the customer state\n")
 	print "Collection Center No."
 	if l1 in state.keys():
-		print "CC_NO = " state.get(l4, default=None)
+		print "CC_NO = %s" % state.get(l4, "None")
 	if l1 in district.keys():
-		print district.get(l2, default=None)
+		print district.get(l2, "None")
 	if l1 in city.keys():
-		print city.get(l3, default=None)
+		print city.get(l3, "None")
 	
 	
-print state
+
